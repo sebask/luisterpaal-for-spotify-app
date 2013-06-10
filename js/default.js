@@ -54,7 +54,7 @@ var App  = (function() {
 	App.prototype.run = function() {
 		self = this;
 
-		$.getJSON('http://luisterpaalforspotify.amplo.bmnet.nl/', function(data) {
+		$.getJSON('http://luisterpaalapp.sebask.me', function(data) {
 			var items = [];
 
 			$.each(data, function(key, album) {
