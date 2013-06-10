@@ -58,7 +58,7 @@ var App  = (function() {
 			var items = [];
 
 			$.each(data, function(key, album) {
-				items.push('<li style="display:inline-block;width:150px;" id="' + album.artist + '"><img class="cover" src="' + album.cover + '" /><a href="' + album.href + '">' + album.artist + ' - ' + album.title + '</a></li>');
+				items.push('<li style="display:inline-block;width:150px;" id="' + album.artist + '"><img class="cover" src="http://images.poms.omroep.nl/image/s150/c150x150/s150x150/' + album.cover + '" /><a href="' + album.album_uri + '">' + album.artist + ' - ' + album.title + '</a></li>');
 			});
 
 			$('<ul/>', {
