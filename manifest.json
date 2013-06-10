@@ -1,0 +1,35 @@
+{
+	"AppDescription": {
+		"en": "The unofficial Luisterpaal app for Spotify",
+		"nl": "De onofficiele Luisterpaal app voor Spotify"
+	},
+	"AppIcon": {
+		"18x18": "icons/18x18_app_icon.png",
+		"32x32": "icons/32x32_icon.png",
+		"64x64": "icons/64x64_icon.png",
+		"128x128": "icons/128x128_icon.png",
+		"256x256": "icons/256x256_icon.png"
+	},
+	"AppName": {
+		"en": "Luisterpaal",
+		"nl": "Luisterpaal"
+	},
+	"BundleIdentifier": "luisterpaal",
+	"BundleType": "Application",
+	"BundleVersion": "1.0.0",
+    "RequiredInterface": 1,
+	"RequiredPermissions": [
+		"http://luisterpaalapp.sebask.me",
+		"https://luisterpaalapp.sebask.me",
+		"http://sandbox.amplo.bmnet.nl",
+		"http://www.google-analytics.com",
+		"https://www.google-analytics.com",
+		"http://gaug.es",
+		"https://gaug.es"
+	],
+	"SupportedLanguages": [
+		"en",
+		"nl"
+	],
+	"VendorIdentifier": "me.sebask"
+}

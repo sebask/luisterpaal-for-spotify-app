@@ -1,0 +1,214 @@
+html, body {
+	padding: 0;
+	margin: 0;
+}
+body, div, p {
+	font-family: Arial, Helvetica, Verdana;
+	color: #333;
+}
+html {
+	background: #ffd008;
+	overflow-y: scroll;
+}
+h1 {
+	font-size: 60px;
+}
+a, a:link, a:active, a:visited {
+	color: #404040;
+	text-decoration: underline;
+}
+a:hover {
+	color: #404040;
+}
+#wrapper {
+	width: 780px;
+	margin: auto;
+	padding: 135px 0 0 0;
+}
+#offline {
+	display: none;
+	width: 500px;
+	position: absolute;
+	top: 50%;
+	margin-top:-8px;
+	left: 50%;
+	margin-left: -250px;
+	text-align: center;
+	color: #111;
+	font-size: 18px;
+	font-weight: bold;
+	text-shadow: 0px 1px 0px rgba(255,255,255,0.1);
+	display: block;
+}
+.cover {
+	width: 150px !important;
+	height: 150px !important;
+}
+.sp-player {	
+	width: 150px;
+	height: 150px;
+}
+.sp-player-image {
+	border-radius: none;
+	box-shadow: none;
+}
+.cover_holder {
+	width: 150px;
+	height: 150px;
+}
+.list_carousel {
+	width: 690px;
+	margin: 0 0 0 40px;
+	height: 235px;
+}
+.caroufredsel_wrapper {
+	height: 235px !important;
+}
+.list_carousel ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: block;
+}
+.list_carousel li {
+	color: #999;
+	text-align: center;
+	padding: 0;
+	margin: 6px;
+	display: block;
+	float: left;
+	position: relative;
+}
+.list_carousel li .title {
+	cursor: pointer;
+	padding-bottom: 28px;
+	display: block;
+	position: absolute;
+	z-index: 10;
+}
+.list_carousel.responsive {
+	width: auto;
+	margin-left: 0;
+}
+.list_carousel {
+	position: relative;
+}
+.clearfix {
+	float: none;
+	clear: both;
+}
+.detail {
+	padding: 10px 45px;
+}
+.detail, .detail p {
+	font-size: 13px;
+	font-family: Arial;
+	color: #999;
+}
+.detail_holder, .read_more {
+	width: 155px;
+}
+.header {
+	font-weight: bold;
+}
+.card_indicator {
+	position: absolute;
+	bottom: 29px;
+	left: -30px;
+}
+.card {
+	width: 155px;
+	height: 195px;
+	padding: 5px 0 0 5px;
+	background: transparent url(/images/card_bg.png) repeat top left;
+}
+.card .nr {
+	position: absolute;
+	top: -10px;
+	left: 15px;
+	background: #F00;
+	color: #FFF;
+	padding: 10px 5px 7px 5px;
+	font-weight: bold;
+	font-size: 19px;
+	z-index: 9999;
+}
+.card .title {
+	margin-top: 5px;
+	font-size: 13px;
+	padding-right: 5px;
+	font-family: Arial, sans-serif !important;
+	height: 35px;
+}
+.card img {
+}
+.card {
+	text-align: left;
+	font-size: 13px;
+	font-family: Arial, sans-serif;
+}
+.prev, .next {
+	position: absolute;
+	right: -50px;
+	display: block !important;
+}
+.prev {
+	top: 60px;
+}
+.next {
+	top: 110px;
+}
+.prev, .next {
+	opacity: 1;
+	-webkit-transition: opacity 0.5s;
+}
+.next.disabled, .prev.disabled {
+	opacity: 0.2;
+	-webkit-transition: opacity 0.5s;
+	cursor: default;
+}
+.unfold {
+	position: absolute;
+	bottom: -21px;
+	left: 20px;
+	display: none;
+	z-index: 2;
+}
+.signature {
+	text-align: center;
+	color: #999;
+	padding-bottom: 20px;
+	padding-top: 40px;
+	color: #FFF;
+}
+.signature a:link, .signature a:hover, .signature a:active, .signature a:visited {
+	color: #FFF;
+	text-decoration: none;
+}
+.socials {
+	padding: 0 10px;
+	margin-left: -10px;
+}
+.socials a {
+	position: relative;
+}
+.socials a:hover {
+	display: none;
+}
+.socials a img {
+	position: relative;
+	bottom: -5px;
+}
+a[href^='http:']::after {
+	margin-left: 3px;
+	content: url('/images/external.png');
+	opacity: 0.5;
+}
+.socials a[href^='http:']::after {
+	margin-left: 3px;
+	content: '';
+	opacity: 0.5;
+}
+.divider {
+	padding: 0 10px;
+}
