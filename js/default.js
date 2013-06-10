@@ -2,13 +2,13 @@ $(document).ready(function() {
 
 	// Default hide? Then unhide?
 	$("#wrapper").hide();
-	
+
 	// Dragging Support for Spotify
 	$('img').live('dragstart', function(event) { event.preventDefault(); });
-	
+
 });
-	
-// Launch Spotify API	
+
+// Launch Spotify API
 var sp = getSpotifyApi(1),
 	models      = sp.require("sp://import/scripts/api/models"),
 	views       = sp.require("sp://import/scripts/api/views"),
@@ -44,37 +44,54 @@ models.session.observe(models.EVENT.STATECHANGED, function() {
 	}
 });
 
+/* The App! */
 var App  = (function() {
 
 	var App = function() {
-
-		this.template = $("#wrapper").html();	
+		this.template = $("#wrapper").html();
 	};
 
-	
 	App.prototype.run = function() {
 		self = this;
 
-$.getJSON('http://luisterpaalforspotify.amplo.bmnet.nl/', function(data) {
-  var items = [];
- 
-  $.each(data, function(key, album) {
-    items.push('<li style="display:inline-block;width:150px;" id="' + album.artist + '"><img class="cover" src="' + album.cover + '" /><a href="' + album.href + '">' + album.artist + ' - ' + album.title + '</a></li>');
-  });
- 
-  $('<ul/>', {
-    'class': 'my-new-list',
-    html: items.join('')
-  }).appendTo('body');
-});
+		$.getJSON('http://luisterpaalforspotify.amplo.bmnet.nl/', function(data) {
+			var items = [];
+
+			$.each(data, function(key, album) {
+				items.push('<li style="display:inline-block;width:150px;" id="' + album.artist + '"><img class="cover" src="' + album.cover + '" /><a href="' + album.href + '">' + album.artist + ' - ' + album.title + '</a></li>');
+			});
+
+			$('<ul/>', {
+				'class': 'my-new-list',
+				html: items.join('')
+			}).appendTo('#wrapper');
+
+
+		}).success(function(d) {
+
+			// Everything went OK while getting and the JSON data
+			//alert("success");
+			$("#wrapper").show();
+
+		}).error(function(d) {
+
+			// Seems something went wrong while getting the JSON data :(
+			alert("error");
+
+		}).complete(function(d) {
+
+			// We're done!
+			//alert("complete");
+
+		});
 
 	};
-	
-	App.prototype.offline = function() {	
+
+	App.prototype.offline = function() {
 		$("#wrapper").hide();
 		$('#offline').show();
 	}
-	
+
 	return App;
-	
+
 })();
